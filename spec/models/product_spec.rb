@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe Product, type: :model do
-
   subject {
     Product.new(name: "Anything",
                 quantity: 20,
@@ -9,8 +8,6 @@ RSpec.describe Product, type: :model do
                   name: "Testing"
                 ))
   }
-
-
   describe 'Validations' do
     it "is valid with valid attributes" do
       subject.price = 200
