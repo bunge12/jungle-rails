@@ -2,14 +2,12 @@ require 'rails_helper'
 
 RSpec.describe User, type: :model do
 
-  before { @user = User.new(
+  subject { described_class.new(
     first_name: "Testing",
     last_name: "Something",
     email: "test@test.com",
     password: "qwerty"
-  )
-}
-  subject { @user }
+  ) }
 
   describe 'Validations' do
     it "is valid given correct parameters" do
@@ -20,10 +18,11 @@ RSpec.describe User, type: :model do
       expect(subject).to_not be_valid
     end
     it "must contain a unique case insensitive email" do
-    #   same_user = @user.dup
-    #   same_user.email = @user.email.upcase
-    #   same_user.save!
-    #   expect(same_user).to_not be_valid
+      described_class.create!(first_name: "Testing",
+        last_name: "Something",
+        email: "test@test.com",
+        password: "qwerty")
+      expect(subject).to_not be_valid
     end
     it "must contain first name" do
       subject.first_name = nil
