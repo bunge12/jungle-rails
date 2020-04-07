@@ -8,7 +8,7 @@ class UsersController < ApplicationController
       session[:user_id] = user.id
       redirect_to '/' , :flash => { :info => 'User created & logged in successfully! Welcome to Jungle!' }
     else
-      redirect_to '/signup'
+      redirect_to '/signup', :flash => { :danger => user.errors.full_messages.join(', ') }
     end
   end
 

@@ -2,7 +2,11 @@
   <header class="page-header">
     <h1>Sign Up for Account</h1>
   </header>
-
+<% flash.each do |type, msg| %>
+  <div class="alert alert-<%= type %>" role="alert">
+    <%= msg %>
+  </div>
+<% end %>
 <%= form_for :user, url: '/users' do |f| %>
 
   <div class="form-group">
