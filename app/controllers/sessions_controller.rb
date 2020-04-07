@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
       redirect_to '/'
     else
       # failure, render login form
-      redirect_to '/login'
+      redirect_to '/login', :flash => { :error => 'Error logging in, please check your email/password.' }
     end
   end
 
