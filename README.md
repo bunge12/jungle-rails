@@ -1,7 +1,15 @@
 # Jungle
 
-A mini e-commerce application built with Rails 4.2 for purposes of teaching Rails by example.
+A mini e-commerce application built with Rails 4.2 for purposes of teaching Rails by example. Allows to browse products and categories, place orders through Stripe integration; admin side allows to modify products and categories. **BEWARE**: This app was published for learning purposes and it is not intended for use in production-grade software.
 
+This project was created and published by me as part of my learnings at Lighthouse Labs.
+
+## Final Product
+
+- Simulates inherited legacy code
+- Built with Ruby 4.2 & Bootstrap 3
+- Has basic user authentication
+- Employs HTTP authentication for admin functionality
 
 ## Setup
 
@@ -22,6 +30,6 @@ More information in their docs: <https://stripe.com/docs/testing#cards>
 
 ## Dependencies
 
-* Rails 4.2 [Rails Guide](http://guides.rubyonrails.org/v4.2/)
-* PostgreSQL 9.x
-* Stripe
+- Rails 4.2 [Rails Guide](http://guides.rubyonrails.org/v4.2/)
+- PostgreSQL 9.x
+- Stripe
